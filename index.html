@@ -6,100 +6,121 @@
 <title>三国谋定天下</title>
 
 <style>
+/* 页面背景（偏暗暖色） */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
-    background: linear-gradient(180deg, #fff4e6, #ffe8cc);
+    background: linear-gradient(180deg, #f3d7b6, #e9c9a0);
     margin: 0;
     padding: 0;
 }
 
 /* 主体卡片 */
 .main {
-    max-width: 480px;
-    margin: 40px auto;
+    max-width: 420px;
+    margin: 50px auto;
     background: #ffffff;
-    padding: 24px 20px;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    padding: 28px 20px 32px;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
     text-align: center;
 }
 
 /* 游戏图标 */
 .game-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 16px;
+    width: 88px;
+    height: 88px;
+    border-radius: 18px;
     margin-bottom: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
 /* 标题 */
 h1 {
-    margin: 10px 0;
+    margin: 12px 0 6px;
     font-size: 22px;
+    color: #333;
 }
 
 /* 文案 */
 p {
+    margin: 6px 0;
     color: #555;
     font-size: 14px;
     line-height: 1.7;
 }
 
-/* 按钮 */
+/* 按钮容器（保证居中） */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 18px;
+}
+
+/* 按钮样式 */
 a.btn {
-    display: block;
     width: 100%;
-    margin: 14px 0;
+    max-width: 320px;
+    margin: 10px 0;
     padding: 14px;
-    background: #ff7a18;
+    background: linear-gradient(180deg, #ff8a2a, #ff6a00);
     color: #fff;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-decoration: none;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
 
 a.btn.secondary {
-    background: #6c757d;
+    background: linear-gradient(180deg, #8a8f96, #6c757d);
 }
 
 a.btn:hover {
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
-/* 公告弹窗 */
+/* 公告弹窗遮罩 */
 #notice {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
+    background: rgba(0,0,0,0.65);
+    display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
 }
 
+/* 公告内容 */
 .notice-box {
     background: #fff;
     width: 90%;
     max-width: 360px;
-    padding: 20px;
-    border-radius: 14px;
+    padding: 22px 20px 24px;
+    border-radius: 16px;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .notice-box h3 {
-    margin-top: 0;
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.notice-box p {
+    font-size: 14px;
+    color: #444;
 }
 
 .notice-box button {
     margin-top: 16px;
-    padding: 10px 20px;
-    background: #ff7a18;
+    padding: 10px 22px;
+    background: linear-gradient(180deg, #ff8a2a, #ff6a00);
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 15px;
 }
 </style>
@@ -109,8 +130,8 @@ a.btn:hover {
 
 <div class="main">
 
-    <!-- 游戏图标（替换成你自己的图片链接） -->
-    <img class="game-icon" src="icon.jpg.jpg"  alt="游戏图标">
+    <!-- 游戏图标 -->
+    <img class="game-icon" src="icon.jpg.jpg" alt="游戏图标">
 
     <h1>三国谋定天下</h1>
 
@@ -119,40 +140,37 @@ a.btn:hover {
     <p>玉石可用于游戏内购买任意道具和礼包</p>
     <p>最新调整：云游 3500 元解锁全档位</p>
 
-    <a class="btn" href="https://sdk.vf9wlc.com/mobile/Downfile/index?data=Z2lkPTUwJnBpZD02MjczfHY1OUgwQ0RuN2ZjaVcwUTlvaDFY" target="_blank">
-        👉 下载游戏
-    </a>
+    <div class="btn-group">
+        <a class="btn" href="https://sdk.vf9wlc.com/mobile/Downfile/index?data=Z2lkPTUwJnBpZD02MjczfHY1OUgwQ0RuN2ZjaVcwUTlvaDFY" target="_blank">
+            👉 下载游戏
+        </a>
 
-    <a class="btn secondary" href="https://www.kdocs.cn/l/ct9wNqXtefrp" target="_blank">
-        👉 查看版本设定
-    </a>
+        <a class="btn secondary" href="https://www.kdocs.cn/l/ct9wNqXtefrp" target="_blank">
+            👉 查看版本设定
+        </a>
 
-    <a class="btn secondary" href="https://qm.qq.com/q/t9YBFL58Kk" target="_blank">
-        👉 联系客服
-    </a>
+        <a class="btn secondary" href="https://qm.qq.com/q/t9YBFL58Kk" target="_blank">
+            👉 联系客服
+        </a>
+    </div>
 
 </div>
 
-<!-- 公告弹窗 -->
+<!-- 公告弹窗（每次打开必弹） -->
 <div id="notice">
     <div class="notice-box">
         <h3>📢 公告</h3>
         <p>
             最新活动已开启<br>
-            福利请进入游戏内查看
+            福利内容请进入游戏内查看
         </p>
         <button onclick="closeNotice()">我知道了</button>
     </div>
 </div>
 
 <script>
-if (!localStorage.getItem("read")) {
-    document.getElementById("notice").style.display = "flex";
-}
-
 function closeNotice() {
     document.getElementById("notice").style.display = "none";
-    localStorage.setItem("read", "1");
 }
 </script>
 
