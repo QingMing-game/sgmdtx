@@ -1,21 +1,19 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>三国谋定天下</title>
-
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE3J9BQ2RW"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-EE3J9BQ2RW');
 </script>
-
 <style>
-/* ===== 三国风背景 ===== */
+/* ===== 三国风背景（暗纹 + 战旗土黄） ===== */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
     margin: 0;
@@ -32,7 +30,7 @@ body {
         linear-gradient(180deg, #c2a06a, #7d5a30);
 }
 
-/* 主体卡片 */
+/* ===== 主体卡片（宣纸 + 边框） ===== */
 .main {
     max-width: 420px;
     margin: 64px auto;
@@ -45,7 +43,7 @@ body {
         inset 0 0 0 2px rgba(140,90,40,0.25);
 }
 
-/* 游戏图标 */
+/* ===== 游戏图标 ===== */
 .game-icon {
     width: 92px;
     height: 92px;
@@ -54,7 +52,7 @@ body {
     box-shadow: 0 10px 22px rgba(0,0,0,0.4);
 }
 
-/* 标题 */
+/* ===== 标题（印章感） ===== */
 h1 {
     margin: 14px 0 10px;
     font-size: 23px;
@@ -65,7 +63,7 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* 文案 */
+/* ===== 文案 ===== */
 p {
     margin: 6px 0;
     color: #5b442e;
@@ -73,7 +71,7 @@ p {
     line-height: 1.75;
 }
 
-/* 按钮组 */
+/* ===== 按钮组 ===== */
 .btn-group {
     display: flex;
     flex-direction: column;
@@ -81,7 +79,7 @@ p {
     margin-top: 24px;
 }
 
-/* 按钮 */
+/* ===== 军令按钮 ===== */
 a.btn {
     width: 100%;
     max-width: 320px;
@@ -95,44 +93,69 @@ a.btn {
     box-shadow:
         0 8px 18px rgba(0,0,0,0.35),
         inset 0 -2px 0 rgba(0,0,0,0.2);
+    transition: all 0.15s ease;
 }
 
+/* 次按钮 */
 a.btn.secondary {
     background: linear-gradient(180deg, #8a7660, #66503a);
 }
 
+/* 按下像盖章 */
 a.btn:active {
     transform: translateY(2px) scale(0.98);
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.35),
+        inset 0 2px 6px rgba(0,0,0,0.4);
 }
 
-/* 公告遮罩 */
-#notice, #wechatModal {
+/* ===== 公告遮罩 ===== */
+#notice {
     position: fixed;
     inset: 0;
-    background: rgba(25,15,5,0.85);
+    background: rgba(25,15,5,0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
 }
 
-/* 弹窗盒子 */
-.notice-box, .wechat-box {
+/* ===== 公告弹窗（动画） ===== */
+.notice-box {
     background: #fff6e4;
     width: 90%;
     max-width: 360px;
-    padding: 26px 22px;
+    padding: 26px 22px 28px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    animation: popup 0.35s ease-out;
 }
 
-.notice-box h3, .wechat-box h3 {
-    margin-top: 0;
+@keyframes popup {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.notice-box h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
     color: #3b2414;
 }
 
-.notice-box button, .wechat-box button {
+.notice-box p {
+    font-size: 14px;
+    color: #5b442e;
+    line-height: 1.7;
+}
+
+.notice-box button {
     margin-top: 18px;
     padding: 11px 26px;
     background: linear-gradient(180deg, #c03a2b, #8f2319);
@@ -154,13 +177,13 @@ a.btn:active {
 
     <p>福利在游戏内领取</p>
     <p>100 元 = 20000 玉石（首充双倍）</p>
-    <p>大小月卡+每日签到每日送10000金币</p>
-    <p>云游 3500 元解锁全档位</p>
+    <p>大小月卡+签到 每日送10000金币</p>
+    <p>最新调整：云游 3500 元解锁全档位</p>
     <p>每天中午13:00开启一个新区</p>
 
     <div class="btn-group">
         <a class="btn" href="https://sdk.vf9wlc.com/mobile/Downfile/index?data=Z2lkPTUwJnBpZD02MjczfHY1OUgwQ0RuN2ZjaVcwUTlvaDFY" target="_blank">
-            👉 游戏下载点这里
+            👉 游戏下载点这里【先注册账号后下载】
         </a>
 
         <a class="btn secondary" href="https://www.kdocs.cn/l/ct9wNqXtefrp" target="_blank">
@@ -168,37 +191,24 @@ a.btn:active {
         </a>
 
         <a class="btn secondary" href="https://qm.qq.com/q/YeNXLVp32e" target="_blank">
-            👉 联系客服
+            👉 遇到不懂的随时联系QQ客服
         </a>
-
-        <!-- 微信群按钮 -->
-        <a class="btn secondary" href="javascript:void(0)" onclick="openWeChat()">
-            👉 畅玩交流群VX
+       <a class="btn secondary" href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=bspgV0yuwCDqQ_y8vZ3z-nv9QBjiO21e&authKey=WUNdmS0U4s9yPPbFmnV9mgkG2%2FdWNicv5WQ5593CvWtbGS1Yx2sONY9HxUG55CvZ&noverify=0&group_code=781486071" target="_blank">
+            👉点击跳转添加QQ交流群781486071（定期发放福利）
         </a>
     </div>
+
 </div>
 
-<!-- 公告 -->
+<!-- 公告（每次打开必弹） -->
 <div id="notice">
     <div class="notice-box">
         <h3>📢 军令公告</h3>
         <p>
             本服为长久运营畅玩服，各位主公请放心征战！<br>
-            福利在游戏内发放！请进入游戏内领取！
+            游戏福利内容请进入游戏内查看！
         </p>
         <button onclick="closeNotice()">我已知晓</button>
-    </div>
-</div>
-
-<!-- 微信群二维码弹窗 -->
-<div id="wechatModal" style="display:none;">
-    <div class="wechat-box">
-        <h3>📱 加入微信群</h3>
-        <img src="VX.png" style="width:100%;border-radius:14px;margin:12px 0;">
-        <p style="font-size:13px;color:#5b442e;">
-            长按识别二维码加入<br>福利与公告群内发放
-        </p>
-        <button onclick="closeWeChat()">关闭</button>
     </div>
 </div>
 
@@ -206,13 +216,18 @@ a.btn:active {
 function closeNotice() {
     document.getElementById("notice").style.display = "none";
 }
-function openWeChat() {
-    document.getElementById("wechatModal").style.display = "flex";
-}
-function closeWeChat() {
-    document.getElementById("wechatModal").style.display = "none";
-}
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
