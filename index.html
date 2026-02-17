@@ -1,168 +1,179 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>三国谋定天下</title>
+
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-EE3J9BQ2RW');
+  gtag("js", new Date());
+  gtag("config", "G-EE3J9BQ2RW");
 </script>
+
 <style>
 /* ===== 三国风背景（暗纹 + 战旗土黄） ===== */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
-    margin: 0;
-    padding: 0;
-    background:
-        repeating-linear-gradient(
-            45deg,
-            rgba(255,255,255,0.04),
-            rgba(255,255,255,0.04) 10px,
-            rgba(0,0,0,0.03) 10px,
-            rgba(0,0,0,0.03) 20px
-        ),
-        radial-gradient(circle at top, rgba(255,255,255,0.35), rgba(0,0,0,0.35)),
-        linear-gradient(180deg, #c2a06a, #7d5a30);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
+  margin: 0;
+  padding: 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.04) 10px,
+      rgba(0,0,0,0.03) 10px,
+      rgba(0,0,0,0.03) 20px
+    ),
+    radial-gradient(circle at top, rgba(255,255,255,0.35), rgba(0,0,0,0.35)),
+    linear-gradient(180deg, #c2a06a, #7d5a30);
 }
 
 /* ===== 主体卡片（宣纸 + 边框） ===== */
 .main {
-    max-width: 420px;
-    margin: 64px auto;
-    background: #fff6e4;
-    padding: 32px 22px 36px;
-    border-radius: 22px;
-    text-align: center;
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.4),
-        inset 0 0 0 2px rgba(140,90,40,0.25);
+  max-width: 420px;
+  margin: 64px auto;
+  background: #fff6e4;
+  padding: 32px 22px 36px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.4),
+    inset 0 0 0 2px rgba(140,90,40,0.25);
 }
 
 /* ===== 游戏图标 ===== */
 .game-icon {
-    width: 92px;
-    height: 92px;
-    border-radius: 22px;
-    margin-bottom: 14px;
-    box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+  width: 92px;
+  height: 92px;
+  border-radius: 22px;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
 }
 
 /* ===== 标题（印章感） ===== */
 h1 {
-    margin: 14px 0 10px;
-    font-size: 23px;
-    color: #3b2414;
-    text-shadow:
-        1px 1px 0 #e7d2b0,
-        -1px -1px 0 #7a4d1d;
-    letter-spacing: 1px;
+  margin: 14px 0 10px;
+  font-size: 23px;
+  color: #3b2414;
+  text-shadow:
+    1px 1px 0 #e7d2b0,
+    -1px -1px 0 #7a4d1d;
+  letter-spacing: 1px;
 }
 
 /* ===== 文案 ===== */
 p {
-    margin: 6px 0;
-    color: #5b442e;
-    font-size: 14px;
-    line-height: 1.75;
+  margin: 6px 0;
+  color: #5b442e;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 /* ===== 按钮组 ===== */
 .btn-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
 }
 
 /* ===== 军令按钮 ===== */
 a.btn {
-    width: 100%;
-    max-width: 320px;
-    margin: 10px 0;
-    padding: 15px;
-    background: linear-gradient(180deg, #c03a2b, #8f2319);
-    color: #fff;
-    font-size: 16px;
-    border-radius: 16px;
-    text-decoration: none;
-    box-shadow:
-        0 8px 18px rgba(0,0,0,0.35),
-        inset 0 -2px 0 rgba(0,0,0,0.2);
-    transition: all 0.15s ease;
+  width: 100%;
+  max-width: 320px;
+  margin: 10px 0;
+  padding: 15px;
+  background: linear-gradient(180deg, #c03a2b, #8f2319);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.35),
+    inset 0 -2px 0 rgba(0,0,0,0.2);
+  transition: all 0.15s ease;
 }
 
 /* 次按钮 */
 a.btn.secondary {
-    background: linear-gradient(180deg, #8a7660, #66503a);
+  background: linear-gradient(180deg, #8a7660, #66503a);
 }
 
 /* 按下像盖章 */
 a.btn:active {
-    transform: translateY(2px) scale(0.98);
-    box-shadow:
-        0 4px 10px rgba(0,0,0,0.35),
-        inset 0 2px 6px rgba(0,0,0,0.4);
+  transform: translateY(2px) scale(0.98);
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.35),
+    inset 0 2px 6px rgba(0,0,0,0.4);
 }
 
 /* ===== 公告遮罩 ===== */
 #notice {
-    position: fixed;
-    inset: 0;
-    background: rgba(25,15,5,0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
+  position: fixed;
+  inset: 0;
+  background: rgba(25,15,5,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
 /* ===== 公告弹窗（动画） ===== */
 .notice-box {
-    background: #fff6e4;
-    width: 90%;
-    max-width: 360px;
-    padding: 26px 22px 28px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
-    animation: popup 0.35s ease-out;
+  background: #fff6e4;
+  width: 90%;
+  max-width: 360px;
+  padding: 26px 22px 28px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+  animation: popup 0.35s ease-out;
 }
 
 @keyframes popup {
-    from {
-        transform: translateY(40px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0);  opacity: 1; }
 }
 
 .notice-box h3 {
-    margin: 0 0 12px;
-    font-size: 18px;
-    color: #3b2414;
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: #3b2414;
 }
 
 .notice-box p {
-    font-size: 14px;
-    color: #5b442e;
-    line-height: 1.7;
+  font-size: 14px;
+  color: #5b442e;
+  line-height: 1.7;
 }
 
 .notice-box button {
-    margin-top: 18px;
-    padding: 11px 26px;
-    background: linear-gradient(180deg, #c03a2b, #8f2319);
-    color: #fff;
-    border: none;
-    border-radius: 14px;
-    font-size: 15px;
+  margin-top: 18px;
+  padding: 11px 26px;
+  background: linear-gradient(180deg, #c03a2b, #8f2319);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+}
+
+/* ===== 复制提示条 ===== */
+#toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.78);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  display: none;
+  z-index: 10000;
 }
 </style>
 </head>
@@ -170,72 +181,119 @@ a.btn:active {
 <body>
 
 <div class="main">
+  <img class="game-icon" src="icon.jpg.jpg" alt="三国谋定天下图标" />
 
-    <img class="game-icon" src="icon.jpg.jpg" alt="三国谋定天下图标">
+  <h1>三国谋定天下畅玩版</h1>
 
-    <h1>三国谋定天下畅玩版</h1>
+  <p>福利在游戏内领取</p>
+  <p>100 元 = 20000 玉石（首充双倍）</p>
+  <p>大小月卡+签到 每日送10000金币</p>
+  <p>最新调整：云游 3500 元解锁全档位</p>
+  <p>每两天中午13:00开启一个新区</p>
 
-    <p>福利在游戏内领取</p>
-    <p>100 元 = 20000 玉石（首充双倍）</p>
-    <p>大小月卡+签到 每日送10000金币</p>
-    <p>最新调整：云游 3500 元解锁全档位</p>
-    <p>每两天中午13:00开启一个新区</p>
+  <div class="btn-group">
+    <a class="btn" href="https://sdk.sknykj.com/mobile/Downfile/index?data=Z2lkPTUwJnBpZD02MjcyfHY1OUgwQ0RuN2ZjaVcwUTlvaDFY" target="_blank" rel="noopener">
+      💫游戏下载点这里💫【先注册账号后下载】
+    </a>
 
-    <div class="btn-group">
-        <a class="btn" href="https://sdk.sknykj.com/mobile/Downfile/index?data=Z2lkPTUwJnBpZD02MjcyfHY1OUgwQ0RuN2ZjaVcwUTlvaDFY" target="_blank">
-            💫游戏下载点这里💫【先注册账号后下载】
-        </a>
+    <a class="btn secondary" href="https://www.kdocs.cn/l/ct9wNqXtefrp" target="_blank" rel="noopener">
+      🔥 版本所有福利设定请看这里🔥
+    </a>
 
-        <a class="btn secondary" href="https://www.kdocs.cn/l/ct9wNqXtefrp" target="_blank">
-            🔥 版本所有福利设定请看这里🔥
-        </a>
+    <a class="btn secondary" href="https://qm.qq.com/q/YeNXLVp32e" target="_blank" rel="noopener">
+      🔔遇到不懂的随时联系QQ客服🔔
+    </a>
 
-        <a class="btn secondary" href="https://qm.qq.com/q/YeNXLVp32e" target="_blank">
-            🔔遇到不懂的随时联系QQ客服🔔
-        </a>
-       <a class="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=GyyC-MroRSlL4kmspRYOtq_C0_yDNl0f&authKey=340mVcSVhf3vPCUiIAq%2BfvZcemAX4ZhZ2oF5plbpXcVc9ZpPWmt8%2B2g47NL4t7qj&noverify=0&group_code=897115046">
-            💰QQ交流群（大本营不定时发放福利）💰
-        </a>
-    </div>
-
+    <!-- ✅ 修复后的QQ群链接 + 微信环境提示 + 失败兜底复制群号 -->
+    <a class="btn secondary"
+       href="https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=GyyC-MroRSlL4kmspRYOtq_C0_yDNl0f&authKey=340mVcSVhf3vPCUiIAq%2BfvZcemAX4ZhZ2oF5plbpXcVc9ZpPWmt8%2B2g47NL4t7qj&noverify=0&group_code=897115046"
+       target="_blank"
+       rel="noopener"
+       onclick="return openQQGroup(event);">
+      💰QQ交流群（大本营不定时发放福利）💰
+    </a>
+  </div>
 </div>
 
 <!-- 公告（每次打开必弹） -->
 <div id="notice">
-    <div class="notice-box">
-        <h3>📢 军令公告</h3>
-        <p>
-            本服为长久运营畅玩服，各位主公请放心征战！<br>
-            游戏福利内容请进入游戏内查看！
-        </p>
-        <button onclick="closeNotice()">我已知晓</button>
-    </div>
+  <div class="notice-box">
+    <h3>📢 军令公告</h3>
+    <p>
+      本服为长久运营畅玩服，各位主公请放心征战！<br />
+      游戏福利内容请进入游戏内查看！
+    </p>
+    <button onclick="closeNotice()">我已知晓</button>
+  </div>
 </div>
 
+<!-- 轻提示 -->
+<div id="toast"></div>
+
 <script>
+/** 关闭公告 */
 function closeNotice() {
-    document.getElementById("notice").style.display = "none";
+  document.getElementById("notice").style.display = "none";
+}
+
+/** 判断是否微信内置浏览器 */
+function isWeChat() {
+  return /MicroMessenger/i.test(navigator.userAgent);
+}
+
+/** toast 提示 */
+function showToast(msg) {
+  var t = document.getElementById("toast");
+  t.textContent = msg;
+  t.style.display = "block";
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(function () {
+    t.style.display = "none";
+  }, 2200);
+}
+
+/** 复制文本（兼容旧机型） */
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise(function (resolve, reject) {
+    try {
+      var textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      textarea.style.top = "0";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      ok ? resolve() : reject();
+    } catch (e) {
+      reject(e);
+    }
+  });
+}
+
+/**
+ * 打开QQ群：
+ * - 微信内：提示“右上角用浏览器打开”，并兜底复制群号
+ * - 非微信：正常新开
+ */
+function openQQGroup(e) {
+  var groupCode = "897115046"; // ✅ 你的群号（兜底用）
+  if (isWeChat()) {
+    e.preventDefault();
+    showToast("微信内可能无法跳转QQ群，请点右上角用浏览器打开；已为你准备复制群号。");
+    copyText(groupCode)
+      .then(function () { showToast("群号已复制：" + groupCode); })
+      .catch(function () { showToast("复制失败，请手动复制群号：" + groupCode); });
+    return false;
+  }
+  return true;
 }
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
